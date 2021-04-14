@@ -1,3 +1,37 @@
+html {
+    font-size: calc(1em + 1vw);
+    height: 100%;
+}
+
 body {
     background-image: url("graphics/backgroundWeb.png");
+    height: 100%;
+    overflow: hidden;
 }
+
+#indexMain {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#indexContent {
+    width: 100%;
+    position: relative;
+    margin-top: 20%;
+    left: 21.5%;
+}
+
+#indexButton {
+    background-color: #ff1814;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+#center {}

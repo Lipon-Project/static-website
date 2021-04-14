@@ -7,6 +7,11 @@ head
 body
 - header, nav, main, footer
 
+💙 April 14, 2021 - Minor updates
+index.html
+fonts added on 'graphics' folder
+essential meta tags update for all webpages
+
 -->
 <html>
 
@@ -17,13 +22,27 @@ body
 
 <head>
 
+    <!-- 
+        charset - For certain future texts to be readable 
+        http-equiv - For certain stuff to be readable
+        viewport - For a more responsive layout
+    -->
+
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Make Your Way, All In One App.">
+
+
 
     <title>
-        TAKE A TOUR - LIPON
+        Take A Tour - LIPON
     </title>
 
 
+
     <script src="js/jquery-3.6.0.min.js"></script>
+
 
 
     <!-- 
@@ -40,7 +59,6 @@ body
     <link rel="stylesheet" href="style.css">
 
 
-
 </head>
 
 
@@ -52,16 +70,24 @@ body
 <body>
 
 
-    <header> </header>
+
+    <div id="pageWrap">
 
 
-    <nav> </nav>
+        <main id="indexMain">
+            <img id="bigLiponLogo" src="graphics/logoWeb.png">
+
+            <div id="indexContent">
+                <button id="indexButton" class="redButtonDesign" href="homePage.html">TAKE A TOUR
+
+                </button>
+            </div>
+
+        </main>
 
 
-    <main> </main>
+    </div>
 
-
-    <footer>EST 2021</footer>
 
 
 </body>
