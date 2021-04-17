@@ -29,7 +29,9 @@
     <link rel="icon" type="image/png" sizes="32x32" href="graphics/32x32Logo.png">
     <link rel="stylesheet" href="style.css">
 
-
+    <!--<link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@1&display=swap" rel="stylesheet">
+        font-family: 'Libre Baskerville', serif;-->
 
 </head>
 
@@ -42,26 +44,34 @@
 <body>
 
 
-    <header> </header>
+    <header>
 
 
-    <nav class="blackDesign">
-        <!--logoNav.png-->
-        <img>
-        <a href="#navHome">HOME</a>
-        <a href="#navAbout">ABOUT US</a>
-        <a href="#navTeam">THE TEAM</a>
-        <a href="#navProduct">OUR PRODUCT</a>
-        <a href="#navContact">CONTACT</a>
-        <!--moreNav.png-->
+        <nav class="blackDesign">
 
-    </nav>
+            <img id="headerLiponLogo" src="graphics/logoNav.png" onclick="window.location.href='index.html'">
+            <a href="#navHome" id="headerHomeNav">HOME</a>
+            <a href="#navAbout" class="headerText">ABOUT US</a>
+            <a href="#navTeam" class="headerText">THE TEAM</a>
+            <a href="#navProduct" class="headerText">OUR PRODUCT</a>
+            <a href="#navContact" class="headerText">CONTACT</a>
+            <img id="navButton" src="graphics/moreNav.png" onclick="window.location.href='index.html'">
+        </nav>
+    </header>
+
+    <main class="mainText">
+        <div>
+            <img id="homePageLogo" src="graphics/logoWebNewHighresClearQuoteLB.png">
+
+        </div>
 
 
-    <main class="mainText"> </main>
+    </main>
 
 
-    <footer class="blackDesign">EST 2021</footer>
+    <footer class="blackDesign">
+        <div>EST 2021</div>
+    </footer>
 
 
 </body>

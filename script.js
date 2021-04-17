@@ -1,7 +1,6 @@
-$(document).ready(function() {
-    console.log("ready!");
-});
-
-$('.indexButton').click(function() {
-    window.location = "homePage.html" + this.id;
-});
+/* 
+Messed up on this one in this update.
+Was trying to implement animations on the index.html page.
+could not maximize the productivity for today.
+I will try adding JS once I am done with the foundations.
+*/
