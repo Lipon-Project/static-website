@@ -50,17 +50,19 @@
         <nav class="blackDesign">
 
             <img id="headerLiponLogo" src="graphics/logoNav.png" onclick="window.location.href='index.html'">
-            <a href="#navHome" id="headerHomeNav">HOME</a>
-            <a href="#navAbout" class="headerText">ABOUT US</a>
-            <a href="#navTeam" class="headerText">THE TEAM</a>
-            <a href="#navProduct" class="headerText">OUR PRODUCT</a>
-            <a href="#navContact" class="headerText">CONTACT</a>
+            <a href="#navHome" id="headerHomeNav" class="headerText" style="text-decoration: none;"><span style=";color:#ff1814;">HOME</span></a>
+            <a href="#navAbout" class="headerText" style="text-decoration: none;"><span style=";color:#040404;">ABOUT US</span></a>
+            <a href="#navTeam" class="headerText" style="text-decoration: none;"><span style=";color:#040404;">THE TEAM</span></a>
+            <a href="#navProduct" class="headerText" style="text-decoration: none;"><span style=";color:#040404;">OUR PRODUCT</span></a>
+            <a href="#navContact" class="headerText" style="text-decoration: none;"><span style=";color:#040404;">CONTACT</span></a>
             <img id="navButton" src="graphics/moreNav.png" onclick="window.location.href='index.html'">
+
+            <!-- 💙 Note to self: utilize the class "headerText" goddamnit XD-->
         </nav>
     </header>
 
     <main class="mainText">
-        <div>
+        <div id="homePageItems">
             <img id="homePageLogo" src="graphics/logoWebNewHighresClearQuoteLB.png">
 
         </div>
@@ -69,10 +71,12 @@
     </main>
 
 
-    <footer class="blackDesign">
-        <div>EST 2021</div>
-    </footer>
 
+    <footer id="mainPageFooter" class="whiteDesign">
+        <div id=footerEstTextWrap>
+            <span style="font-style: italic; font-weight: bold ;font-size:100% ;color: black;">EST</span><span style="font-style: italic; font-weight: bold;font-size:75%; font-stretch: ultra-expanded; color:black;margin-left: 0.75%;">2021</span>
+        </div>
+    </footer>
 
 </body>
 

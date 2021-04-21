@@ -1,11 +1,68 @@
 html {
-    font-size: calc(1em + 1vw);
+    font-size: calc(0.7em + 0.7vw);
     height: 100%;
+    width: 100%;
+    overflow-y: hidden;
 }
 
 body {
+    display: block;
     background-image: url("graphics/backgroundWeb.png");
-    height: 100%;
+    background-size: contain;
+    margin: -8px;
+}
+
+header {
+    display: block;
+    color: white;
+    position: sticky;
+    text-align: center;
+    text-decoration: none;
+    flex-wrap: wrap;
+    outline: white;
+    box-shadow: 0 5px 3px -3px #777;
+    padding: 1%;
+    background-color: white;
+}
+
+nav {
+    height: 56px;
+    padding: 0 16px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+footer {
+    display: block;
+    padding: 11px;
+    height: 2612px;
+    color: black;
+    position: relative;
+    background-color: white;
+}
+
+#headerLiponLogo {
+    cursor: pointer;
+    height: auto;
+    width: 5%;
+    min-width: 10%;
+    margin-right: 20%;
+    margin-left: 2.9%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+#navButton {
+    cursor: pointer;
+    height: auto;
+    width: 3.25%;
+    margin-left: 5%;
+}
+
+#headerText {
+    font-size: 10px;
 }
 
 #indexMain {
@@ -31,8 +88,27 @@ body {
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
+    cursor: pointer;
+    cursor: pointer;
+    height: auto;
+    height: 5%;
 }
 
-header {
-    position: sticky;
+#mainPageItems {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#homePageLogo {
+    height: 27%;
+    width: 27%;
+    margin-left: 35%;
+    padding-top: 10%;
+    padding-bottom: 7.9%;
+}
+
+#footerEstTextWrap {
+    margin-left: 1.88%;
 }
