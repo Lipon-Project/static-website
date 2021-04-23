@@ -112,3 +112,36 @@ footer {
 #footerEstTextWrap {
     margin-left: 1.88%;
 }
+
+#productPageItemsWrap {
+    display: flex;
+    padding: 2%;
+}
+
+#productPageItem1 {
+    order: 1;
+    position: inherit;
+}
+
+#productPageItem2 {
+    order: 2;
+    position: inherit;
+}
+
+#productGooglePlayText {
+    width: 50%;
+    margin-bottom: 3.5%;
+    margin-top: 5%;
+}
+
+#productGooglePlayButton {
+    margin-left: 5%;
+    margin-bottom: 1%;
+}
+
+#promoGif {
+    border-radius: 10%;
+    width: 150%;
+    margin-right: 20%;
+    position: relative;
+}
