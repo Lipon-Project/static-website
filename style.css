@@ -9,6 +9,9 @@ body {
     display: block;
     background-image: url("graphics/backgroundWeb.png");
     background-size: contain;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-repeat: repeat-x;
     margin: -8px;
 }
 
@@ -115,17 +118,24 @@ footer {
 
 #productPageItemsWrap {
     display: flex;
-    padding: 2%;
+    padding: 4%;
+    flex-wrap: wrap;
+    padding-bottom: 72px;
 }
 
 #productPageItem1 {
-    order: 1;
-    position: inherit;
+    height: 16%;
+    width: 16%;
+    margin-left: 2%;
 }
 
 #productPageItem2 {
-    order: 2;
-    position: inherit;
+    height: 20%;
+    width: 70%;
+}
+
+#productPageLeftText {
+    width: 100px;
 }
 
 #productGooglePlayText {
@@ -135,13 +145,70 @@ footer {
 }
 
 #productGooglePlayButton {
+    width: 25%;
     margin-left: 5%;
     margin-bottom: 1%;
 }
 
 #promoGif {
+    margin-top: 10%;
     border-radius: 10%;
-    width: 150%;
+    width: 113%;
+    margin-left: 30%;
     margin-right: 20%;
+}
+
+#aboutPageSection {
+    display: block;
+    padding-bottom: 535px;
+}
+
+#contactPageSection {
+    display: block;
+    padding-bottom: 138px;
+}
+
+#contactPageSectionCenter {
+    display: flex;
+    justify-items: center;
+}
+
+#teamPageSection {
+    display: block;
+    padding-bottom: 535px;
+}
+
+#aboutPageSectionLeft {
+    display: block;
+    background-image: url("graphics/backgroundAbout.png");
+    z-index: 1;
+}
+
+#aboutPageSectionRight {
+    display: block;
+}
+
+#contactPageSectionCenter {
+    margin-top: 5%;
+}
+
+#contactEmail {
     position: relative;
+    display: inline-block;
+}
+
+#contactEmail #ContactEmailText {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+}
+
+#contactEmail:hover #ContactEmailText {
+    visibility: visible;
 }

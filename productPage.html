@@ -60,17 +60,17 @@
 
     <main class="mainText">
         <div id="productPageItemsWrap">
-            <div id="productPageItem1">
-                <img id="promoLeftText" src="graphics/promoLeftText.png">
-                <img id="productGooglePlayText" src="graphics/productGooglePlayText.png">
-                <img id="productGooglePlayButton" src="graphics/productGooglePlayButton.png" onclick="window.location.href ='https://play.google.com/store/apps/details?id=com.lipon.lipon';" style="cursor:pointer;">
-
-            </div>
             <div id="productPageItem2">
-                <img id="promoGif" src="graphics/promoGif.gif">
-
+                <img id="productPageLeftText" class="productPageFlexRowChild" src="graphics/promoLeftText3.png" style="width: 100%; margin-bottom: -5%;">
+                <img id="productGooglePlayText" src="graphics/productGooglePlayText.png" style="margin-left: 8%; cursor: pointer; " onclick="window.location.href ='https://play.google.com/store/apps/details?id=com.lipon.lipon';">
+                <img id="productGooglePlayButton" src="graphics/productGooglePlayButton.png" style="margin-left: 8%; cursor: pointer;" onclick="window.location.href ='https://play.google.com/store/apps/details?id=com.lipon.lipon';">
 
             </div>
+            <div id="productPageItem1">
+                <img id="promoGif" src="graphics/promoGif.gif" style="box-shadow: 0 0 30px #333;">
+            </div>
+
+
         </div>
 
 
@@ -79,8 +79,11 @@
 
 
 
-    <footer>EST 2021</footer>
-
+    <footer id="mainPageFooter" class="whiteDesign">
+        <div id=footerEstTextWrap>
+            <span style="font-style: italic; font-weight: bold ;font-size:100% ;color: black;">EST</span><span style="font-style: italic; font-weight: bold;font-size:75%; font-stretch: ultra-expanded; color:black;margin-left: 0.75%;">2021</span>
+        </div>
+    </footer>
 
 </body>
 
