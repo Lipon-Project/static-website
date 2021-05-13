@@ -35,6 +35,9 @@ nav {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    font-family: helvetica;
+    font-weight: 400;
+    font-stretch: extra-condensed;
 }
 
 footer {
