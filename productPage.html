@@ -58,13 +58,35 @@
     </header>
 
 
-    <main class="mainText">
+    <main class="mainText" style="background-image: url(graphics/backgroundProduct.png);     background-size: cover; background-repeat: repeat;">
         <div id="productPageItemsWrap">
             <div id="productPageItem2">
+
                 <img id="productPageLeftText" class="productPageFlexRowChild" src="graphics/promoLeftText3.png" style="width: 100%; margin-bottom: -5%;">
                 <img id="productGooglePlayText" src="graphics/productGooglePlayText.png" style="margin-left: 8%; cursor: pointer; " onclick="window.location.href ='https://play.google.com/store/apps/details?id=com.lipon.lipon';">
                 <img id="productGooglePlayButton" src="graphics/productGooglePlayButton.png" style="margin-left: 8%; cursor: pointer;" onclick="window.location.href ='https://play.google.com/store/apps/details?id=com.lipon.lipon';">
 
+                <style>
+                    #productPageLeftText:hover {
+                        transform: scale(1.1);
+                        transition: .2s;
+                    }
+                    
+                    #productGooglePlayText:hover {
+                        transform: scale(1.1);
+                        transition: .2s;
+                    }
+                    
+                    #productGooglePlayButton:hover {
+                        transform: scale(1.03);
+                        transition: .2s;
+                    }
+                    
+                    #promoGif:hover {
+                        transform: scale(1.2);
+                        transition: .2s;
+                    }
+                </style>
             </div>
             <div id="productPageItem1">
                 <img id="promoGif" src="graphics/promoGif.gif" style="box-shadow: 0 0 30px #333;">
