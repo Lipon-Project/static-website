@@ -86,11 +86,11 @@ essential meta tags update for all webpages
                             LIPON is an interactive and informative Android application that lets you know about the hottest places to visit in the region for you, and your friends and family. With no delays or paywalls to encounter
                         </p>
                     </div>
-                    <button type="button" id="indexButton" class="redButtonDesign" style="border-radius: 8px; padding:20px; margin-top: 4%; line-height:30px;box-shadow:0 2px 0 rgb(0 0 0 / 20%), 0 -2px 0 rgb(255 255 255 / 20%);">
+                    <button type="button" id="indexButton" class="redButtonDesign" style="border-radius: 8px; padding:20px; margin-top: 4%; line-height:30px;box-shadow:0 2px 0 rgb(0 0 0 / 20%), 0 -2px 0 rgb(255 255 255 / 20%);" onmousedown="playAudio()">
                     <div  style="margin-left: 50px; padding-right: 16px;">
                         
                         
-                        <a href="graphics//liponco_appv1.24.5.apk" download style="text-decoration:none; color:inherit; font-style: normal;" onclick="thankUser()">DOWNLOAD NOW</a></div>
+                        <a href="graphics/lipon_v1.0.0.apk" download style="text-decoration:none; color:inherit; font-style: normal;" onclick="thankUser()" >DOWNLOAD NOW</a></div>
                         <script>
                             function thankUser() {
                                 alert("Thank you for downloading our app!");
@@ -98,7 +98,7 @@ essential meta tags update for all webpages
                         </script>
                     </button>
 
-                    <p id="learnMore" type="button" onclick="window.location.href='homePage.html'" style="cursor: pointer; color:#ff1814; text-shadow:0 2px 0 rgb(0 0 0 / 20%); font-weight: 600; font-family: Arial, Helvetica, sans-serif;">
+                    <p id="learnMore" type="button" onmouseover="playAudioInfo()" onmousedown="playAudio()" onclick="window.location.href='homePage.html'" style="cursor: pointer; color:#ff1814; text-shadow:0 2px 0 rgb(0 0 0 / 20%); font-weight: 600; font-family: Arial, Helvetica, sans-serif;">
                         LEARN MORE
                     </p>
 
@@ -114,7 +114,24 @@ essential meta tags update for all webpages
                         }
                     </style>
                 </div>
+                <audio id="generalSound">
+                    <source src="graphics/generalClick.wav">
+                </audio>
+                <audio id="infoSound">
+                    <source src="graphics/infoSound.wav">
+                </audio>
+                <script>
+                    var x = document.getElementById("generalSound");
+                    var z = document.getElementById("infoSound")
 
+                    function playAudio() {
+                        x.play();
+                    }
+
+                    function playAudioInfo() {
+                        z.play();
+                    }
+                </script>
             </main>
 
 

@@ -17,22 +17,17 @@
 
 
     <title>
-        Home - LIPON
+        The team - LIPON
     </title>
 
 
-
     <script src="js/jquery-3.6.0.min.js"></script>
-
 
 
     <link rel="icon" type="image/png" sizes="32x32" href="graphics/32x32LogoNew.png">
     <link rel="stylesheet" href="style.css">
 
 
-    <!--<link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@1&display=swap" rel="stylesheet">
-        font-family: 'Libre Baskerville', serif;-->
 
 </head>
 
@@ -48,13 +43,13 @@
     <header>
 
 
-        <nav class="blackDesign">
+        <nav class="blackDesign" onmousedown="playAudio()">
 
             <img id="headerLiponLogo" src="graphics/logoNav.png" onclick="window.location.href='index.html'">
-            <a href="homePage.html" id="headerHomeNav" class="headerText" style="text-decoration: none;"><span style=";color:#ff1814;">HOME</span></a>
-            <a href="aboutPage.html" class="headerText" style="text-decoration: none;"><span style=";color:#040404;">ABOUT US</span></a>
-            <a href="teamPage.html" class="headerText" style="text-decoration: none;"><span style=";color:#040404;">THE TEAM</span></a>
+            <a href="homePage.html" id="headerHomeNav" class="headerText" style="text-decoration: none;"><span style=";color:#040404;">HOME</span></a>
             <a href="productPage.html" class="headerText" style="text-decoration: none;"><span style=";color:#040404;">OUR PRODUCT</span></a>
+            <a href="teamPage.html" class="headerText" style="text-decoration: none;"><span style=";color:#ff1814;">THE TEAM</span></a>
+            <a href="aboutPage.html" class="headerText" style="text-decoration: none;"><span style=";color:#040404;">ABOUT US</span></a>
             <a href="contactPage.html" class="headerText" style="text-decoration: none;"><span style=";color:#040404;">CONTACT</span></a>
             <img id="navButton" src="graphics/moreNav.png" onclick="window.location.href='index.html'">
 
@@ -62,22 +57,176 @@
         </nav>
     </header>
 
-    <main class="mainText">
-        <div id="homePageItems">
-            <img id="homePageLogo" src="graphics/logoWebNewHighresClearQuoteLB.png">
+    <main class="mainText" style="background-image: url(graphics/backgroundAbout4.png);     background-size: cover; background-repeat: repeat;">
 
+        <div onmouseover="playAudioInfo()">
+            <img class="teamMember" src="graphics/visionTab.png" style="margin-left:-12%; margin-top:21%; margin-bottom: 0.55%; margin-left: 7%;width: 27.6%; " onclick="togglePopup()" onmousedown="playAudioRing()">
+            <img class="teamMember" src="graphics/missionTab.png" style="margin-left:-5.2%;margin-top:21%; margin-bottom: 0.55%; margin-left: 1.5%;width: 27.6%; " onclick="togglePopup2()" onmousedown="playAudioRing()">
+            <img class="teamMember" src="graphics/coreTab.png" style="margin-left:-5.2%; margin-top:21%; margin-bottom: 0.55%; margin-left: 1.5%;width: 27.6%;" onclick="togglePopup3()" onmousedown="playAudioRing()">
+        </div>
+        <div class="popup" id="popup-1" style="font-size: 125%;">
+            <div class="overlay"></div>
+            <div class="content">
+                <div class="close-btn" onclick="togglePopup()">×</div>
+                <h1 style="color: #ff1814; text-transform:uppercase; font-size: 150%;">
+                    Finance Head
+                </h1>
+                <p style="font-weight: 700;  margin-top: -17px;">
+                    Alegre, May Ann
+                </p>
+                <p>
+                    She is in charge of the finances and ensuring the company is as profitable as possible.
+                </p>
+
+
+            </div>
+        </div>
+        <div class="popup" id="popup-2" style="font-size: 105%;">
+            <div class="overlay"></div>
+            <div class="content">
+                <div class="close-btn" onclick="togglePopup2()">×</div>
+                <h1 style="color: #ff1814; text-transform:uppercase; font-size: 150%;">
+                    Human Resources & <br>Development Head
+                </h1>
+                <p style="font-weight: 700;  margin-top: -17px;">
+                    Diamante, Julien
+                </p>
+                <p>
+                    She is responsible for ensuring the organization of the overall administration, coordination, and evaluation of human resources plans and programs are realized.
+                </p>
+
+            </div>
+        </div>
+        <div class="popup" id="popup-3">
+            <div class="overlay"></div>
+            <div class="content">
+                <div class="close-btn" onclick="togglePopup3()">×</div>
+                <h1 style="color: #ff1814; text-transform:uppercase; font-size: 150%;">
+                    Research &<br>Development Director
+                </h1>
+                <p style="font-weight: 700;  margin-top: -17px;">
+                    Patriarca, Cherry
+                </p>
+                <p>
+                    She is responsible for research, planning, and implementing new programs and protocols into the company.
+                </p>
+
+            </div>
         </div>
 
 
+        <style>
+            .teamMember:hover {
+                top: -200%;
+                transform: scale(1.025);
+                transition: .2s;
+            }
+            
+            .popup .overlay {
+                position: fixed;
+                top: 0px;
+                left: 0px;
+                width: 100vw;
+                height: 100vh;
+                background: rgba(0, 0, 0, 0.7);
+                z-index: 1;
+                display: none;
+            }
+            
+            .popup .content {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%) scale(0);
+                background: #fff;
+                width: 95%;
+                max-width: 1000px;
+                height: 250px;
+                z-index: 2;
+                text-align: center;
+                padding: 20px;
+                box-sizing: border-box;
+                font-family: Helvetica;
+            }
+            
+            .popup .close-btn {
+                cursor: pointer;
+                position: absolute;
+                right: 20px;
+                top: 20px;
+                width: 30px;
+                height: 30px;
+                background: #ff1814;
+                color: #fff;
+                font-family: "open sans", sans-serif;
+                font-size: 25px;
+                font-weight: 600;
+                line-height: 30px;
+                text-align: center;
+                border-radius: 50%;
+            }
+            
+            .popup.active .overlay {
+                display: block;
+            }
+            
+            .popup.active .content {
+                transition: all 300ms ease-in-out;
+                transform: translate(-50%, -50%) scale(1);
+            }
+            
+            button {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                padding: 15px;
+                font-size: 18px;
+                border: 2px solid #222;
+                color: #222;
+                text-transform: uppercase;
+                font-weight: 600;
+                background: #fff;
+            }
+        </style>
+
     </main>
-
-
 
     <footer id="mainPageFooter" class="whiteDesign">
         <div id=footerEstTextWrap>
             <span style="font-style: italic; font-weight: bold ;font-size:100% ;color: black;">EST</span><span style="font-style: italic; font-weight: bold;font-size:75%; font-stretch: ultra-expanded; color:black;margin-left: 0.75%;">2021</span>
         </div>
     </footer>
+
+    <script src="script.js"></script>
+
+
+    <audio id="generalSound">
+        <source src="graphics/generalClick.wav">
+    </audio>
+    <audio id="infoSound">
+        <source src="graphics/infoSound.wav">
+    </audio>
+    <audio id="ringSound">
+        <source src="graphics/teamSound.wav">
+    </audio>
+    <script>
+        var x = document.getElementById("generalSound");
+        var y = document.getElementById("ringSound")
+        var z = document.getElementById("infoSound")
+
+        function playAudio() {
+            x.play();
+        }
+
+        function playAudioRing() {
+            y.play();
+        }
+
+        function playAudioInfo() {
+            z.play();
+        }
+    </script>
 
 </body>
 

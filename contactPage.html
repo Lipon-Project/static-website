@@ -43,7 +43,7 @@
     <header>
 
 
-        <nav class="blackDesign">
+        <nav class="blackDesign" onmousedown="playAudio()">
 
             <img id="headerLiponLogo" src="graphics/logoNav.png" onclick="window.location.href='index.html'">
             <a href="homePage.html" id="headerHomeNav" class="headerText" style="text-decoration: none;"><span style=";color:#040404;">HOME</span></a>
@@ -58,7 +58,7 @@
     </header>
 
 
-    <main class="mainText" style="background-image: url(graphics/backgroundContact2.png);     background-size: cover; background-repeat: repeat; margin-left: -2.4%;">
+    <main class="mainText" style="background-image: url(graphics/backgroundContact4.png);     background-size: cover; background-repeat: repeat; margin-left: -2.4%;">
 
 
         <div id="contactPageSection" style="opacity: 0;">
@@ -82,7 +82,24 @@
         </div>
     </footer>
 
+    <audio id="generalSound">
+        <source src="graphics/generalClick.wav">
+    </audio>
+    <audio id="infoSound">
+        <source src="graphics/infoSound.wav">
+    </audio>
+    <script>
+        var x = document.getElementById("generalSound");
+        var z = document.getElementById("infoSound")
 
+        function playAudio() {
+            x.play();
+        }
+
+        function playAudioInfo() {
+            z.play();
+        }
+    </script>
 </body>
 
 

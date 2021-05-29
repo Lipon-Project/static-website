@@ -43,7 +43,7 @@
     <header>
 
 
-        <nav class="blackDesign">
+        <nav class="blackDesign" onmousedown="playAudio()">
 
             <img id="headerLiponLogo" src="graphics/logoNav.png" onclick="window.location.href='index.html'">
             <a href="homePage.html" id="headerHomeNav" class="headerText" style="text-decoration: none;"><span style=";color:#040404;">HOME</span></a>
@@ -58,30 +58,192 @@
     </header>
 
 
-    <main class="mainText" style="background-image: url(graphics/backgroundAbout2.png);     background-size: cover; background-repeat: repeat;">
+    <main class="mainText" style="background-image: url(graphics/backgroundAbout4.png);     background-size: cover; background-repeat: repeat; ">
+
         <div>
-            <div class="zoomTab" style=" margin-left: 15%; margin-right: 15%;height: 56px; padding: 0 16px; display: flex; flex-direction: row; align-items: center; justify-content: space-between;">
+            <img class="teamMember" src="graphics/visionTab.png" style="margin-left:-12%; margin-top:21%; margin-bottom: 0.55%; margin-left: 7%;width: 27.6%; " onclick="togglePopup()" onmousedown="playAudio()">
+            <img class="teamMember" src="graphics/missionTab.png" style="margin-left:-5.2%;margin-top:21%; margin-bottom: 0.55%; margin-left: 1.5%;width: 27.6%; " onclick="togglePopup2()" onmousedown="playAudio()">
+            <img class="teamMember" src="graphics/coreTab.png" style="margin-left:-5.2%; margin-top:21%; margin-bottom: 0.55%; margin-left: 1.5%;width: 27.6%;" onclick="togglePopup3()" onmousedown="playAudio()">
+        </div>
+        <div class="popup" id="popup-1" style="font-size: 125%;">
+            <div class="overlay"></div>
+            <div class="content">
+                <div class="close-btn" onclick="togglePopup()" onmousedown="playAudio()">×</div>
+                <h1 style="color: #ff1814; text-transform:uppercase; font-size: 180%;">
+                    Vision
+                </h1>
+                <p style="font-weight: 700;  margin-top: -17px;">
+                    Alegre, May Ann
+                </p>
+                <p>
+                    She is in charge of the finances and ensuring the company is as profitable as possible.
+                </p>
 
 
-                <img class="zoomTab" src="graphics/visionTab.png" style="margin-left:-12%; margin-top:80%; width:40%; box-shadow:0 2px 0 rgb(0 0 0 / 20%), 0 -2px 0 rgb(255 255 255 / 20%);">
-                <img class="zoomTab" src="graphics/missionTab.png" style="margin-left:5.2%; margin-top:80%; width:40%; box-shadow:0 2px 0 rgb(0 0 0 / 20%), 0 -2px 0 rgb(255 255 255 / 20%); ">
-                <img class="zoomTab" src="graphics/coreTab.png" style="margin-left:5.2%; margin-top:80%; width:40%; box-shadow:0 2px 0 rgb(0 0 0 / 20%), 0 -2px 0 rgb(255 255 255 / 20%); ">
+            </div>
+        </div>
+        <div class="popup" id="popup-2" style="font-size: 105%;">
+            <div class="overlay"></div>
+            <div class="content">
+                <div class="close-btn" onclick="togglePopup2()" onmousedown="playAudio()">×</div>
+                <h1 style="color: #ff1814; text-transform:uppercase; font-size: 200%;">
+                    Mission
+                </h1>
+                <p style="font-weight: 700;  margin-top: -17px;">
+                    Diamante, Julien
+                </p>
+                <p>
+                    She is responsible for ensuring the organization of the overall administration, coordination, and evaluation of human resources plans and programs are realized.
+                </p>
 
+            </div>
+        </div>
+        <div class="popup" id="popup-3" onmousedown="playAudio()">
+            <div class="overlay"></div>
+            <div class="content" style="height: 50%;">
+                <div class="close-btn" onclick="togglePopup3()">×</div>
+                <h1 style="color: #ff1814; text-transform:uppercase; font-size: 200%;">
+                    Core Values
+                </h1>
+                <p style="font-weight: 700;  margin-top: -17px; margin-left: 4%; margin-right: 4%;">
+                    Lipon ensures that all employees are working towards the same goals.<br>The company adhere to the following:
+                </p>
+                <pre>
+▪ Long-Term View. We ensure to look beyond the present to deliver future good experiences for the customer.
+▪ Integrity. Take responsibility to provide trustworthy information, quality application, and good service.
+▪ Partnership.  Our company is open to cooperating and forming partnerships with other businesses, may it be big or small.
+▪ Originality. Plagiarism, copying and stealing of other works is prohibited in our company. It is a must in the Lipon Corp. that everything we claim as ours is truly our own.
+▪ Nurturing. We make sure that our users and employees are not experiencing any inconvenience and that our costumers are happy and satisfied.
 
+                </pre>
+
+                <style>
+                    pre {
+                        line-break: strict;
+                        width: 95%;
+                        max-width: 1000px;
+                        height: 250px;
+                        z-index: 2;
+                        text-align: center;
+                        font-family: Helvetica;
+                    }
                 </style>
             </div>
-            <img src=" graphics/nan.png " style="width: 1161px; position:static">
         </div>
+
+
+        <style>
+            .teamMember:hover {
+                top: -200%;
+                transform: scale(1.025);
+                transition: .2s;
+            }
+            
+            .popup .overlay {
+                position: fixed;
+                top: 0px;
+                left: 0px;
+                width: 100vw;
+                height: 100vh;
+                background: rgba(0, 0, 0, 0.7);
+                z-index: 1;
+                display: none;
+            }
+            
+            .popup .content {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%) scale(0);
+                background: #fff;
+                width: 95%;
+                max-width: 1000px;
+                height: 250px;
+                z-index: 2;
+                text-align: center;
+                padding: 20px;
+                box-sizing: border-box;
+                font-family: Helvetica;
+            }
+            
+            .popup .close-btn {
+                cursor: pointer;
+                position: absolute;
+                right: 20px;
+                top: 20px;
+                width: 30px;
+                height: 30px;
+                background: #ff1814;
+                color: #fff;
+                font-family: "open sans", sans-serif;
+                font-size: 25px;
+                font-weight: 600;
+                line-height: 30px;
+                text-align: center;
+                border-radius: 50%;
+            }
+            
+            .popup.active .overlay {
+                display: block;
+            }
+            
+            .popup.active .content {
+                transition: all 300ms ease-in-out;
+                transform: translate(-50%, -50%) scale(1);
+            }
+            
+            button {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                padding: 15px;
+                font-size: 18px;
+                border: 2px solid #222;
+                color: #222;
+                text-transform: uppercase;
+                font-weight: 600;
+                background: #fff;
+            }
+        </style>
+
     </main>
 
-
-
-    <footer id="mainPageFooter " class="whiteDesign ">
+    <footer id="mainPageFooter" class="whiteDesign">
         <div id=footerEstTextWrap>
-            <span style="font-style: italic; font-weight: bold ;font-size:100% ;color: black; ">EST</span><span style="font-style: italic; font-weight: bold;font-size:75%; font-stretch: ultra-expanded; color:black;margin-left: 0.75%; ">2021</span>
+            <span style="font-style: italic; font-weight: bold ;font-size:100% ;color: black;">EST</span><span style="font-style: italic; font-weight: bold;font-size:75%; font-stretch: ultra-expanded; color:black;margin-left: 0.75%;">2021</span>
         </div>
     </footer>
 
+    <script src="script.js"></script>
+
+
+    <audio id="generalSound">
+        <source src="graphics/generalClick.wav">
+    </audio>
+    <audio id="infoSound">
+        <source src="graphics/infoSound.wav">
+    </audio>
+    <audio id="ringSound">
+        <source src="graphics/teamSound.wav">
+    </audio>
+    <script>
+        var x = document.getElementById("generalSound");
+        var y = document.getElementById("ringSound")
+        var z = document.getElementById("infoSound")
+
+        function playAudio() {
+            x.play();
+        }
+
+        function playAudioRing() {
+            y.play();
+        }
+
+        function playAudioInfo() {
+            z.play();
+        }
+    </script>
 
 </body>
 

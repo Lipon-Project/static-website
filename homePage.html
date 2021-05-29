@@ -48,7 +48,7 @@
     <header>
 
 
-        <nav class="blackDesign">
+        <nav class="blackDesign" onmousedown="playAudio()">
 
             <img id="headerLiponLogo" src="graphics/logoNav.png" onclick="window.location.href='index.html'">
             <a href="homePage.html" id="headerHomeNav" class="headerText" style="text-decoration: none;"><span style="color:#ff1814;">HOME</span></a>
@@ -67,47 +67,42 @@
             <!-- Full-width images with number and caption text -->
             <div class="mySlides fade" style="margin-top: -0.5%;">
 
-                <video id="homePageLiponAppPromo" controls="" muted="" autoplay="" src="graphics/lipon-homepage-promo.mp4"></video>
+                <video id="homePageLiponAppPromo" controls="" muted="" autoplay="" src="graphics/gameTrailerVideo.mp4"></video>
 
             </div>
 
-            <div id="homePageLiponAppPromo" class="mySlides fade">
+            <div class="mySlides fade" style="margin-top: -0.5%;">
 
-                <img src="graphics/shogiVacant.png" style="width:99.5%">
-
-            </div>
-
-            <div id="homePageLiponAppPromo" class="mySlides fade">
-
-                <img src="graphics/shogiVacant.png " style="width:99.5%">
+                <video id="homePageLiponAppPromo" controls="" muted="" autoplay="" src="graphics/informericalVideo.mp4"></video>
 
             </div>
 
-            <div id="homePageLiponAppPromo" class="mySlides fade">
+            <div class="mySlides fade" style="margin-top: -0.5%;">
 
-                <img src="graphics/shogiVacant.png " style="width:99.5%">
+                <video id="homePageLiponAppPromo" controls="" muted="" autoplay="" src="graphics/tripleIIIVideo.mp4"></video>
+
+            </div>
+
+            <div class="mySlides fade" style="margin-top: -0.5%;">
+
+                <video id="homePageLiponAppPromo" controls="" muted="" autoplay="" src="graphics/productPitchingVideo.mp4"></video>
 
             </div>
 
-            <div id="homePageLiponAppPromo" class="mySlides fade">
 
-                <img src="graphics/shogiVacant.png " style="width:99.5%">
-
-            </div>
 
             <!-- Next and previous buttons -->
-            <a class="prev " onclick="plusSlides(-1) " style="background-color: black;">&#10094;</a>
-            <a class="next " onclick="plusSlides(1) " style="background-color: black;">&#10095;</a>
+            <a class="prev " onclick="plusSlides(-1) " onmousedown="playAudio()" style="background-color: black;">&#10094;</a>
+            <a class="next " onclick="plusSlides(1) " onmousedown="playAudio()" style="background-color: black;">&#10095;</a>
         </div>
         <br>
 
         <!-- The dots/circles -->
-        <div style="text-align:center; margin-top: -66px; margin-bottom: 2%; margin-left: 3.44%; filter: drop-shadow();">
+        <div style="text-align:center; margin-top: -66px; margin-bottom: 2%; margin-left: 3.44%; filter: drop-shadow();" onmousedown="playAudio()">
             <span class="dot " onclick="currentSlide(1) "></span>
             <span class="dot " onclick="currentSlide(2) "></span>
             <span class="dot " onclick="currentSlide(3) "></span>
             <span class="dot " onclick="currentSlide(4) "></span>
-            <span class="dot " onclick="currentSlide(5) "></span>
         </div>
         <!--  <div id="homePageItems ">
             <video id="homePageLiponAppPromo " controls=" " muted=" " autoplay=" " src="graphics/lipon-homepage-promo.mp4 "></video>
@@ -286,7 +281,24 @@
         }
     </style>
 
+    <audio id="generalSound">
+    <source src="graphics/generalClick.wav">
+</audio>
+    <audio id="infoSound">
+    <source src="graphics/infoSound.wav">
+</audio>
+    <script>
+        var x = document.getElementById("generalSound");
+        var z = document.getElementById("infoSound")
 
+        function playAudio() {
+            x.play();
+        }
+
+        function playAudioInfo() {
+            z.play();
+        }
+    </script>
 
     <footer id="mainPageFooter " class="whiteDesign ">
         <div id=footerEstTextWrap>

@@ -45,15 +45,33 @@
 
         <nav class="blackDesign">
 
-            <img id="headerLiponLogo" src="graphics/logoNav.png" onclick="window.location.href='index.html'">
-            <a href="homePage.html" id="headerHomeNav" class="headerText" style="text-decoration: none;"><span style=";color:#040404;">HOME</span></a>
-            <a href="productPage.html" class="headerText" style="text-decoration: none;"><span style=";color:#ff1814;">OUR PRODUCT</span></a>
-            <a href="teamPage.html" class="headerText" style="text-decoration: none;"><span style=";color:#040404;">THE TEAM</span></a>
-            <a href="aboutPage.html" class="headerText" style="text-decoration: none;"><span style=";color:#040404;">ABOUT US</span></a>
-            <a href="contactPage.html" class="headerText" style="text-decoration: none;"><span style=";color:#040404;">CONTACT</span></a>
+            <img id="headerLiponLogo" src="graphics/logoNav.png" onclick="window.location.href='index.html'" onmousedown="playAudio()">
+            <a href="homePage.html" id="headerHomeNav" class="headerText" style="text-decoration: none;" onmousedown="playAudio()"><span style=";color:#040404;">HOME</span></a>
+            <a href="productPage.html" class="headerText" style="text-decoration: none; " onmousedown="playAudio()"><span style=";color:#ff1814;">OUR PRODUCT</span></a>
+            <a href="teamPage.html" class="headerText" style="text-decoration: none;" onmousedown="playAudio()"><span style=";color:#040404;">THE TEAM</span></a>
+            <a href="aboutPage.html" class="headerText" style="text-decoration: none;" onmousedown="playAudio()"><span style=";color:#040404;">ABOUT US</span></a>
+            <a href="contactPage.html" class="headerText" style="text-decoration: none;" onmousedown="playAudio()"><span style=";color:#040404;">CONTACT</span></a>
             <img id="navButton" src="graphics/moreNav.png" onclick="window.location.href='index.html'">
 
-            <!-- 💙 Note to self: utilize the class "headerText" goddamnit XD-->
+            <audio id="generalSound">
+                <source src="graphics/generalClick.wav">
+            </audio>
+            <audio id="infoSound">
+                <source src="graphics/infoSound.wav">
+            </audio>
+            <script>
+                var x = document.getElementById("generalSound");
+                var z = document.getElementById("infoSound")
+
+                function playAudio() {
+                    x.play();
+                }
+
+                function playAudioInfo() {
+                    z.play();
+                }
+            </script>
+
         </nav>
     </header>
 
@@ -63,9 +81,27 @@
             <div id="productPageItem2">
 
                 <img id="productPageLeftText" class="productPageFlexRowChild" src="graphics/promoLeftText3.png" style="width: 100%; margin-bottom: -5%;">
-                <img id="productGooglePlayText" src="graphics/productGooglePlayText.png" style="margin-left: 8%; cursor: pointer; " onclick="window.location.href ='https://play.google.com/store/apps/details?id=com.lipon.lipon';">
-                <img id="productGooglePlayButton" src="graphics/productGooglePlayButton.png" style="margin-left: 8%; cursor: pointer;" onclick="window.location.href ='https://play.google.com/store/apps/details?id=com.lipon.lipon';">
+                <a href="graphics/lipon_v1.0.0.apk" download style="text-decoration:none; color:inherit; font-style: normal;" onclick="thankUser()" onmousedown="playAudio()">
+                    <img id="productGooglePlayText" src="graphics/productGooglePlayText.png" style="margin-left: 8%; cursor: pointer;" onmousedown="playAudio()">
+                    <script>
+                        function thankUser() {
+                            alert("Thank you for downloading our app!");
+                        }
+                    </script>
+                </a>
 
+                <img id="productGooglePlayButton" src="graphics/productGooglePlayButton.png" onmousedown="playAudioInfo()" style="margin-left: 8%; cursor: pointer;" onclick="togglePopup()">
+
+                <div class="popup" id="popup-1">
+                    <div class="overlay"></div>
+                    <div class="content">
+                        <div class="close-btn" onclick="togglePopup()" onmousedown="playAudio()">×</div>
+                        <h1 style="color: #ff1814; text-transform:uppercase; font-size: 150%;">What's new on v1.0.0?</h1>
+                        <p><span style="font-weight: 900; color: #ff1814;">NEW:</span> <span style="font-weight: 600;">Search, ❤, or bookmark </span>your selected landmarks.<span style="font-weight: 600;"> Save your preferences online </span> by signing
+                            up and logging-in. A categorized selection of <span style="font-weight: 600;">over 25 landmarks.</span></p>
+
+                    </div>
+                </div>
                 <style>
                     #productPageLeftText:hover {
                         transform: scale(1.1);
@@ -86,13 +122,80 @@
                         transform: scale(1.2);
                         transition: .2s;
                     }
+                    
+                    .popup .overlay {
+                        position: fixed;
+                        top: 0px;
+                        left: 0px;
+                        width: 100vw;
+                        height: 100vh;
+                        background: rgba(0, 0, 0, 0.7);
+                        z-index: 1;
+                        display: none;
+                    }
+                    
+                    .popup .content {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%) scale(0);
+                        background: #fff;
+                        width: 95%;
+                        max-width: 500px;
+                        height: 250px;
+                        z-index: 2;
+                        text-align: center;
+                        padding: 20px;
+                        box-sizing: border-box;
+                        font-family: Helvetica;
+                    }
+                    
+                    .popup .close-btn {
+                        cursor: pointer;
+                        position: absolute;
+                        right: 20px;
+                        top: 20px;
+                        width: 30px;
+                        height: 30px;
+                        background: #ff1814;
+                        color: #fff;
+                        font-family: "open sans", sans-serif;
+                        font-size: 25px;
+                        font-weight: 600;
+                        line-height: 30px;
+                        text-align: center;
+                        border-radius: 50%;
+                    }
+                    
+                    .popup.active .overlay {
+                        display: block;
+                    }
+                    
+                    .popup.active .content {
+                        transition: all 300ms ease-in-out;
+                        transform: translate(-50%, -50%) scale(1);
+                    }
+                    
+                    button {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        padding: 15px;
+                        font-size: 18px;
+                        border: 2px solid #222;
+                        color: #222;
+                        text-transform: uppercase;
+                        font-weight: 600;
+                        background: #fff;
+                    }
                 </style>
             </div>
             <div id="productPageItem1">
-                <img id="promoGif" src="graphics/promoGif.gif" style="box-shadow: 0 0 30px #333;">
+                <img id="promoGif" src="graphics/promoGif4.gif" style="box-shadow: 0 0 30px #333;">
             </div>
 
-
+            <script src="script.js"></script>
         </div>
 
 

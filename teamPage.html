@@ -43,7 +43,7 @@
     <header>
 
 
-        <nav class="blackDesign">
+        <nav class="blackDesign" onmousedown="playAudio()">
 
             <img id="headerLiponLogo" src="graphics/logoNav.png" onclick="window.location.href='index.html'">
             <a href="homePage.html" id="headerHomeNav" class="headerText" style="text-decoration: none;"><span style=";color:#040404;">HOME</span></a>
@@ -57,20 +57,182 @@
         </nav>
     </header>
 
-    <main class="mainText" style="background-image: url(graphics/backgroundTeam3.png);     background-size: cover; background-repeat: repeat;">
+    <main class="mainText" style="background-image: url(graphics/backgroundTeam4.png);     background-size: cover; background-repeat: repeat;">
+
+        <div onmouseover="playAudioInfo()">
+            <img class="teamMember" src="graphics/teamMember10.png" style="margin-top:24%; margin-bottom: 7.55%; margin-left: 7%;width: 6%; box-shadow:0 5px 0 rgb(0 0 0 / 80%), 0 -2px 0 rgb(255 255 255 / 20%); border-radius:50%;" onclick="togglePopup()" onmousedown="playAudioRing()">
+            <img class="teamMember" src="graphics/teamMember5.png" style="margin-top:24%; margin-bottom: 7.55%; margin-left: 1.5%;width: 6%; box-shadow:0 5px 0 rgb(0 0 0 / 80%), 0 -2px 0 rgb(255 255 255 / 20%); border-radius:50%;" onclick="togglePopup2()" onmousedown="playAudioRing()">
+            <img class="teamMember" src="graphics/teamMember6.png" style="margin-top:24%; margin-bottom: 7.55%; margin-left: 1.5%;width: 6%; box-shadow:0 5px 0 rgb(0 0 0 / 80%), 0 -2px 0 rgb(255 255 255 / 20%); border-radius:50%;" onclick="togglePopup3()" onmousedown="playAudioRing()">
+            <img class="teamMember" src="graphics/teamMember4.png" style="margin-top:24%; margin-bottom: 7.55%; margin-left: 1.5%;width: 6%; box-shadow:0 5px 0 rgb(0 0 0 / 80%), 0 -2px 0 rgb(255 255 255 / 20%); border-radius:50%;" onclick="togglePopup4()" onmousedown="playAudioRing()">
+            <img class="teamMember" src="graphics/teamMember2.png" style="margin-top:24%; margin-bottom: 7.55%; margin-left: 2%;width: 7%; box-shadow:0 5px 0 rgb(0 0 0 / 80%), 0 -2px 0 rgb(255 255 255 / 20%); border-radius:50%;" onclick="togglePopup5()" onmousedown="playAudioRing()">
+            <img class="teamMember" src="graphics/teamMember1.png" style="margin-top:24%; margin-bottom: 7.55%; margin-left: 2%;width: 8%; box-shadow:0 5px 0 rgb(0 0 0 / 80%), 0 -2px 0 rgb(255 255 255 / 20%); border-radius:50%;" onclick="togglePopup6()" onmousedown="playAudioRing()">
+            <img class="teamMember" src="graphics/teamMember3.png" style="margin-top:24%; margin-bottom: 7.55%; margin-left: 2%;width: 7%; box-shadow:0 5px 0 rgb(0 0 0 / 80%), 0 -2px 0 rgb(255 255 255 / 20%); border-radius:50%;" onclick="togglePopup7()" onmousedown="playAudioRing()">
+            <img class="teamMember" src="graphics/teamMember7.png" style="margin-top:24%; margin-bottom: 7.55%; margin-left: 2%;width: 6%; box-shadow:0 5px 0 rgb(0 0 0 / 80%), 0 -2px 0 rgb(255 255 255 / 20%); border-radius:50%;" onclick="togglePopup8()" onmousedown="playAudioRing()">
+            <img class="teamMember" src="graphics/teamMember8.png" style="margin-top:24%; margin-bottom: 7.55%; margin-left: 2%;width: 6%; box-shadow:0 5px 0 rgb(0 0 0 / 80%), 0 -2px 0 rgb(255 255 255 / 20%); border-radius:50%;" onclick="togglePopup9()" onmousedown="playAudioRing()">
+            <img class="teamMember" src="graphics/teamMember9.png" style="margin-top:24%; margin-bottom: 7.55%; margin-left: 2%;width: 6%; box-shadow:0 5px 0 rgb(0 0 0 / 80%), 0 -2px 0 rgb(255 255 255 / 20%); border-radius:50%;" onclick="togglePopup10()" onmousedown="playAudioRing()">
+        </div>
+        <div class="popup" id="popup-1" style="font-size: 125%;">
+            <div class="overlay"></div>
+            <div class="content">
+                <div class="close-btn" onclick="togglePopup()">×</div>
+                <h1 style="color: #ff1814; text-transform:uppercase; font-size: 150%;">
+                    Finance Head
+                </h1>
+                <p style="font-weight: 700;  margin-top: -17px;">
+                    Alegre, May Ann
+                </p>
+                <p>
+                    She is in charge of the finances and ensuring the company is as profitable as possible.
+                </p>
 
 
-        <img class="teamMember" src="graphics/teamMember10.png" style="margin-top:24%; margin-bottom: 7.55%; margin-left: 7%;width: 6%; box-shadow:0 5px 0 rgb(0 0 0 / 80%), 0 -2px 0 rgb(255 255 255 / 20%); border-radius:50%;">
-        <img class="teamMember" src="graphics/teamMember5.png" style="margin-top:24%; margin-bottom: 7.55%; margin-left: 1.5%;width: 6%; box-shadow:0 5px 0 rgb(0 0 0 / 80%), 0 -2px 0 rgb(255 255 255 / 20%); border-radius:50%;">
-        <img class="teamMember" src="graphics/teamMember6.png" style="margin-top:24%; margin-bottom: 7.55%; margin-left: 1.5%;width: 6%; box-shadow:0 5px 0 rgb(0 0 0 / 80%), 0 -2px 0 rgb(255 255 255 / 20%); border-radius:50%;">
-        <img class="teamMember" src="graphics/teamMember4.png" style="margin-top:24%; margin-bottom: 7.55%; margin-left: 1.5%;width: 6%; box-shadow:0 5px 0 rgb(0 0 0 / 80%), 0 -2px 0 rgb(255 255 255 / 20%); border-radius:50%;">
-        <img class="teamMember" src="graphics/teamMember2.png" style="margin-top:24%; margin-bottom: 7.55%; margin-left: 2%;width: 7%; box-shadow:0 5px 0 rgb(0 0 0 / 80%), 0 -2px 0 rgb(255 255 255 / 20%); border-radius:50%;">
-        <img class="teamMember" src="graphics/teamMember1.png" style="margin-top:24%; margin-bottom: 7.55%; margin-left: 2%;width: 8%; box-shadow:0 5px 0 rgb(0 0 0 / 80%), 0 -2px 0 rgb(255 255 255 / 20%); border-radius:50%;">
-        <img class="teamMember" src="graphics/teamMember3.png" style="margin-top:24%; margin-bottom: 7.55%; margin-left: 2%;width: 7%; box-shadow:0 5px 0 rgb(0 0 0 / 80%), 0 -2px 0 rgb(255 255 255 / 20%); border-radius:50%;">
-        <img class="teamMember" src="graphics/teamMember7.png" style="margin-top:24%; margin-bottom: 7.55%; margin-left: 2%;width: 6%; box-shadow:0 5px 0 rgb(0 0 0 / 80%), 0 -2px 0 rgb(255 255 255 / 20%); border-radius:50%;">
-        <img class="teamMember" src="graphics/teamMember8.png" style="margin-top:24%; margin-bottom: 7.55%; margin-left: 2%;width: 6%; box-shadow:0 5px 0 rgb(0 0 0 / 80%), 0 -2px 0 rgb(255 255 255 / 20%); border-radius:50%;">
-        <img class="teamMember" src="graphics/teamMember9.png" style="margin-top:24%; margin-bottom: 7.55%; margin-left: 2%;width: 6%; box-shadow:0 5px 0 rgb(0 0 0 / 80%), 0 -2px 0 rgb(255 255 255 / 20%); border-radius:50%;">
+            </div>
+        </div>
+        <div class="popup" id="popup-2" style="font-size: 105%;">
+            <div class="overlay"></div>
+            <div class="content">
+                <div class="close-btn" onclick="togglePopup2()">×</div>
+                <h1 style="color: #ff1814; text-transform:uppercase; font-size: 150%;">
+                    Human Resources & <br>Development Head
+                </h1>
+                <p style="font-weight: 700;  margin-top: -17px;">
+                    Diamante, Julien
+                </p>
+                <p>
+                    She is responsible for ensuring the organization of the overall administration, coordination, and evaluation of human resources plans and programs are realized.
+                </p>
 
+            </div>
+        </div>
+        <div class="popup" id="popup-3">
+            <div class="overlay"></div>
+            <div class="content">
+                <div class="close-btn" onclick="togglePopup3()">×</div>
+                <h1 style="color: #ff1814; text-transform:uppercase; font-size: 150%;">
+                    Research &<br>Development Director
+                </h1>
+                <p style="font-weight: 700;  margin-top: -17px;">
+                    Patriarca, Cherry
+                </p>
+                <p>
+                    She is responsible for research, planning, and implementing new programs and protocols into the company.
+                </p>
+
+            </div>
+        </div>
+        <div class="popup" id="popup-4" style="font-size: 105%;">
+            <div class="overlay"></div>
+            <div class="content">
+                <div class="close-btn" onclick="togglePopup4()">×</div>
+                <h1 style="color: #ff1814; text-transform:uppercase; font-size: 150%;">
+                    Web Developer &<br> Game Artist
+                </h1>
+                <p style="font-weight: 700;  margin-top: -17px;">
+                    Mallari, Roldan
+                </p>
+                <p>
+                    He is responsible for the application designs such as the background, layout and more. He is also responsible for making promotional websites.
+                </p>
+
+            </div>
+        </div>
+        <div class="popup" id="popup-5" style="font-size: 115%;">
+            <div class="overlay"></div>
+            <div class="content">
+                <div class="close-btn" onclick="togglePopup5()">×</div>
+                <h1 style="color: #ff1814; text-transform:uppercase; font-size: 150%;">
+                    Game Developer
+                </h1>
+                <p style="font-weight: 700;  margin-top: -17px;">
+                    Amoin, Aaron Angelo
+                </p>
+                <p>
+                    He is responsible for designing and developing the application. He is the one to code the base engine from the ideas of the design team.
+                </p>
+
+            </div>
+        </div>
+        <div class="popup" id="popup-6" style="font-size: 127%;">
+            <div class="overlay"></div>
+            <div class="content">
+                <div class="close-btn" onclick="togglePopup6()">×</div>
+                <h1 style="color: #ff1814; text-transform:uppercase; font-size: 150%;">
+                    President
+                </h1>
+                <p style="font-weight: 700;  margin-top: -17px;">
+                    Ursua, Danilo
+                </p>
+                <p>
+                    He is the one who established the company and is task with providing strong leadership for the team.
+                </p>
+
+            </div>
+        </div>
+        <div class="popup" id="popup-7">
+            <div class="overlay"></div>
+            <div class="content">
+                <div class="close-btn" onclick="togglePopup7()">×</div>
+                <h1 style="color: #ff1814; text-transform:uppercase; font-size: 150%;">
+                    Game Designer &<br>Creative Director
+                </h1>
+                <p style="font-weight: 700;  margin-top: -17px;">
+                    Condino, Josua
+                </p>
+                <p>
+                    He is responsible for the overall style of the application covering both the User Interface as well as User Experience design. He is also the one who will lead a team of producers in producing trailers, commercials and advertisements both for the company
+                    and the product.
+                </p>
+
+            </div>
+        </div>
+        <div class="popup" id="popup-8">
+            <div class="overlay"></div>
+            <div class="content">
+                <div class="close-btn" onclick="togglePopup8()">×</div>
+                <h1 style="color: #ff1814; text-transform:uppercase; font-size: 150%;">
+                    Sales & Marketing<br>Executive
+                </h1>
+                <p style="font-weight: 700;  margin-top: -17px;">
+                    Peñaflor, Bea Kristina
+                </p>
+                <p>
+                    She researches and develop marketing and sales strategies for the company. She is also responsible for tracking sales data and creating performance reports.
+                </p>
+
+            </div>
+        </div>
+        <div class="popup" id="popup-9" style="font-size: 135%;">
+            <div class="overlay"></div>
+            <div class="content">
+                <div class="close-btn" onclick="togglePopup9()">×</div>
+                <h1 style="color: #ff1814; text-transform:uppercase; font-size: 150%;">
+                    HR&D Secretary
+                </h1>
+                <p style="font-weight: 700;  margin-top: -17px;">
+                    Politico, Edward
+                </p>
+                <p>
+                    He aids the HRD head and helps in organizing the administration.
+                </p>
+
+            </div>
+        </div>
+        <div class="popup" id="popup-10" style="font-size: 110%;">
+            <div class="overlay"></div>
+            <div class="content">
+                <div class="close-btn" onclick="togglePopup10()">×</div>
+                <h1 style="color: #ff1814; text-transform:uppercase; font-size: 150%;">
+                    Research & Development<br>and Marketing Assistance
+                </h1>
+                <p style="font-weight: 700;  margin-top: -17px;">
+                    Dotado, John Vincent
+                </p>
+                <p>
+                    He ensures documentation is prepared and distributed for research proposals.
+                </p>
+
+            </div>
+        </div>
 
         <style>
             .teamMember:hover {
@@ -78,10 +240,76 @@
                 transform: scale(1.2);
                 transition: .2s;
             }
+            
+            .popup .overlay {
+                position: fixed;
+                top: 0px;
+                left: 0px;
+                width: 100vw;
+                height: 100vh;
+                background: rgba(0, 0, 0, 0.7);
+                z-index: 1;
+                display: none;
+            }
+            
+            .popup .content {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%) scale(0);
+                background: #fff;
+                width: 95%;
+                max-width: 1000px;
+                height: 250px;
+                z-index: 2;
+                text-align: center;
+                padding: 20px;
+                box-sizing: border-box;
+                font-family: Helvetica;
+            }
+            
+            .popup .close-btn {
+                cursor: pointer;
+                position: absolute;
+                right: 20px;
+                top: 20px;
+                width: 30px;
+                height: 30px;
+                background: #ff1814;
+                color: #fff;
+                font-family: "open sans", sans-serif;
+                font-size: 25px;
+                font-weight: 600;
+                line-height: 30px;
+                text-align: center;
+                border-radius: 50%;
+            }
+            
+            .popup.active .overlay {
+                display: block;
+            }
+            
+            .popup.active .content {
+                transition: all 300ms ease-in-out;
+                transform: translate(-50%, -50%) scale(1);
+            }
+            
+            button {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                padding: 15px;
+                font-size: 18px;
+                border: 2px solid #222;
+                color: #222;
+                text-transform: uppercase;
+                font-weight: 600;
+                background: #fff;
+            }
         </style>
 
     </main>
-
 
     <footer id="mainPageFooter" class="whiteDesign">
         <div id=footerEstTextWrap>
@@ -89,6 +317,35 @@
         </div>
     </footer>
 
+    <script src="script.js"></script>
+
+
+    <audio id="generalSound">
+        <source src="graphics/generalClick.wav">
+    </audio>
+    <audio id="infoSound">
+        <source src="graphics/infoSound.wav">
+    </audio>
+    <audio id="ringSound">
+        <source src="graphics/teamSound.wav">
+    </audio>
+    <script>
+        var x = document.getElementById("generalSound");
+        var y = document.getElementById("ringSound")
+        var z = document.getElementById("infoSound")
+
+        function playAudio() {
+            x.play();
+        }
+
+        function playAudioRing() {
+            y.play();
+        }
+
+        function playAudioInfo() {
+            z.play();
+        }
+    </script>
 
 </body>
 
