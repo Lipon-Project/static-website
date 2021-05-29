@@ -70,6 +70,16 @@
             <img class="teamMember" src="graphics/teamMember7.png" style="margin-top:24%; margin-bottom: 7.55%; margin-left: 2%;width: 6%; box-shadow:0 5px 0 rgb(0 0 0 / 80%), 0 -2px 0 rgb(255 255 255 / 20%); border-radius:50%;" onclick="togglePopup8()" onmousedown="playAudioRing()">
             <img class="teamMember" src="graphics/teamMember8.png" style="margin-top:24%; margin-bottom: 7.55%; margin-left: 2%;width: 6%; box-shadow:0 5px 0 rgb(0 0 0 / 80%), 0 -2px 0 rgb(255 255 255 / 20%); border-radius:50%;" onclick="togglePopup9()" onmousedown="playAudioRing()">
             <img class="teamMember" src="graphics/teamMember9.png" style="margin-top:24%; margin-bottom: 7.55%; margin-left: 2%;width: 6%; box-shadow:0 5px 0 rgb(0 0 0 / 80%), 0 -2px 0 rgb(255 255 255 / 20%); border-radius:50%;" onclick="togglePopup10()" onmousedown="playAudioRing()">
+
+            <style>
+                .teamMember {
+                    filter: contrast(130%)
+                }
+                
+                .teamMember:hover {
+                    filter: drop-shadow(0px 0px 16px rgb(255, 255, 255));
+                }
+            </style>
         </div>
         <div class="popup" id="popup-1" style="font-size: 125%;">
             <div class="overlay"></div>
@@ -327,7 +337,7 @@
         <source src="graphics/infoSound.wav">
     </audio>
     <audio id="ringSound">
-        <source src="graphics/teamSound.wav">
+        <source src="graphics/generalClick.wav">
     </audio>
     <script>
         var x = document.getElementById("generalSound");

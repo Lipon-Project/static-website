@@ -58,21 +58,49 @@
     </header>
 
 
-    <main class="mainText" style="background-image: url(graphics/backgroundContact4.png);     background-size: cover; background-repeat: repeat; margin-left: -2.4%;">
+    <main class="mainText" style="background-image: url(graphics/backgroundContact5.png); background-size: cover; background-repeat: repeat;">
 
+        <img class="teamMember" src="graphics/contactInfo.png" style="margin-top:31.9%;  margin-left: 4.25%; margin-bottom: 0.20%; width: 33%; " onclick="togglePopup()">
+        <img class="teamMember" src="graphics/contactNumber.png" style="margin-top:24%;  margin-left: -4%;width: 17%; margin-bottom: 0.5%;  " onclick="myFunction()" onmousedown="playAudioInfo()">
+        <img class="teamMember" src="graphics/contactEmailNew.png" style="margin-top:28%;  margin-left: 1%;width: 17%; margin-right: -10%;  margin-bottom: 0.5%;" onclick="myFunction2()" onmousedown="playAudioInfo()">
+        <img class="teamMember2" id="fb" src="graphics/contactFacebook.png" style="margin-top:24%; margin-bottom: 1.55%; margin-left: 13.5%;width: 4.7%;margin-bottom: 0.5%;  " onclick="location.href = 'https://www.facebook.com/LiponCO'" onmousedown="playAudioInfo()">
+        <img class="teamMember2" id="tw" src="graphics/contactTwitter.png" style="margin-top:28%; margin-bottom: 1.55%; margin-left: 0.45%;width: 4.7%;margin-bottom: 0.5%; " onclick="togglePopup()" onmousedown="playAudioInfo()">
+        <img class="teamMember2" id="ins" src="graphics/contactInstagram.png" style="margin-top:24%; margin-bottom: 1.55%; margin-left: 0.45%;width: 4.7%;margin-bottom: 0.5%;  " onclick="togglePopup()" onmousedown="playAudioInfo()">
+        <img class="teamMember2" id="gth" src="graphics/contactGitHub.png" style="margin-top:24%; margin-bottom: 1.55%; margin-left: 0.45%;width: 4.7%; margin-bottom: 0.5%; " onclick="location.href = 'https://github.com/Lipon-Project'" onmousedown="playAudioInfo()">
 
-        <div id="contactPageSection" style="opacity: 0;">
-            <div style="justify-content: center;"><img src="graphics/contanctUsText.png" style="margin-top: 0%; margin-bottom: -10%; width: 100%;"></div>
-            <div id="contactPageSectionCenter" style="justify-content: center;margin-left: 10%; margin-right: 8%; ">
-                <img src="graphics/contactFacebook.png" style="width: 15%;margin-right: 2%;cursor: pointer; " onclick="window.location.href ='https://facebook.com/LiponCO/';">
-                <img src="graphics/contactTwitter.png" style="width: 15%; margin-right: 2%;cursor: pointer; " onclick="window.location.href ='https://twitter.com/liponCO';">
-                <img src="graphics/contactInstagram.png" style="width: 15%; margin-right: 2%;cursor: pointer; " onclick="window.location.href ='https://instagram.com/liponCO/;">
-                <img src="graphics/contactEmail.png" style="width: 15%; margin-right: 2%; cursor:pointer; ">
-                <img src="graphics/contactGitHub.png" style="width: 15%; margin-right: 2%;cursor: pointer; " onclick="window.location.href ='https://github.com/Lipon-Project';">
-            </div>
-        </div>
+        <input type="text" value="09554126644" id="myInput" style="visibility: visible; position:absolute; opacity: 0;">
+        <input type="text" value="lipon.co@outlook.com" id="myInput2" style="visibility: visible; position:absolute;  opacity: 0;">
+        <script>
+            function myFunction() {
+                var copyText = document.getElementById("myInput");
+                copyText.select();
+                copyText.setSelectionRange(0, 99999)
+                document.execCommand("copy");
+                alert("Copied the phone number!");
+            }
 
-
+            function myFunction2() {
+                var copyText = document.getElementById("myInput2");
+                copyText.select();
+                copyText.setSelectionRange(0, 99999)
+                document.execCommand("copy");
+                alert("Copied the email address!");
+            }
+        </script>
+        <style>
+            .teamMember:hover {
+                transition: 0.2s;
+                filter: drop-shadow(0px 0px 16px gray);
+            }
+            
+            .teamMember2 {
+                filter: grayscale(100%) contrast(120%);
+            }
+            
+            .teamMember2:hover {
+                filter: grayscale(100%) contrast(120%)drop-shadow(0px 0px 5px gray);
+            }
+        </style>
     </main>
 
 
